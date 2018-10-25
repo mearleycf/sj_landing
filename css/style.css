@@ -16,6 +16,7 @@ body {
 
 a {
   color: #1dc8cd;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -48,6 +49,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 4px 4px 0 0;
   right: 15px;
   bottom: 0;
+  -webkit-transition: none;
   transition: none;
 }
 
@@ -72,6 +74,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   top: 0;
   right: 0;
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
   z-index: 997;
 }
@@ -115,6 +118,7 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(45deg, #1de099, #1dc8cd);
   padding: 20px 0;
   height: 72px;
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
@@ -124,7 +128,7 @@ h1, h2, h3, h4, h5, h6 {
 #intro {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(45deg, rgba(29, 224, 153, 0.8), rgba(29, 200, 205, 0.8)), url("../img/intro-bg.jpg") center top no-repeat;
+  background: linear-gradient(45deg, rgba(29, 224, 153, 0.8), rgba(29, 200, 205, 0.8)), url("../img/US-Supreme-Court-zoom.jpg") center top no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -141,11 +145,20 @@ h1, h2, h3, h4, h5, h6 {
   top: 60px;
   right: 0;
   height: calc(50% - 60px);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #intro h2 {
@@ -187,6 +200,7 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   padding: 8px 28px;
   border-radius: 50px;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   margin: 10px;
   border: 2px solid #fff;
@@ -210,15 +224,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #intro .product-screens img {
-  box-shadow: 0px -2px 19px 4px rgba(0, 0, 0, 0.29);
+  -webkit-box-shadow: 0px -2px 19px 4px rgba(0, 0, 0, 0.29);
+          box-shadow: 0px -2px 19px 4px rgba(0, 0, 0, 0.29);
 }
 
 #intro .product-screens .product-screen-1 {
   position: absolute;
   z-index: 30;
-  left: calc(50% + 54px);
+  left: calc(20%);
   bottom: 0;
   top: 30px;
+}
+
+#intro .product-screens .product-screen-1 img {
+  max-width: 60vw;
 }
 
 #intro .product-screens .product-screen-2 {
@@ -337,17 +356,20 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu ul {
   margin: 4px 0 0 0;
   padding: 10px;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  -webkit-box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+          box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
   background: #fff;
 }
 
 .nav-menu ul li {
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
 .nav-menu ul li a {
   padding: 10px;
   color: #333;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   display: block;
   font-size: 13px;
@@ -373,6 +395,7 @@ h1, h2, h3, h4, h5, h6 {
   background: none;
   font-size: 24px;
   display: none;
+  -webkit-transition: all 0.4s;
   transition: all 0.4s;
   outline: none;
   cursor: pointer;
@@ -399,6 +422,7 @@ h1, h2, h3, h4, h5, h6 {
   left: -260px;
   width: 260px;
   overflow-y: auto;
+  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
@@ -497,6 +521,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   width: 60px;
   height: 3px;
   background: #1dc8cd;
+  background: -webkit-gradient(linear, left bottom, left top, from(#1dc8cd), to(#55fabe));
   background: linear-gradient(0deg, #1dc8cd 0%, #55fabe 100%);
   margin: 0 auto;
   margin-bottom: 20px;
@@ -608,6 +633,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #features .icon i {
   color: #666666;
   font-size: 40px;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -672,6 +698,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #advanced-features i {
   color: #666666;
   font-size: 64px;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   float: left;
   padding: 0 15px 0px 0;
@@ -716,6 +743,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------*/
 #call-to-action {
   overflow: hidden;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(29, 200, 205, 0.65)), to(rgba(29, 205, 89, 0.2))), url(../img/call-to-action-bg.jpg) fixed center center;
   background: linear-gradient(rgba(29, 200, 205, 0.65), rgba(29, 205, 89, 0.2)), url(../img/call-to-action-bg.jpg) fixed center center;
   background-size: cover;
   padding: 80px 0;
@@ -733,9 +761,15 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 @media (min-width: 769px) {
   #call-to-action .cta-btn-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 }
 
@@ -747,6 +781,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   display: inline-block;
   padding: 8px 30px;
   border-radius: 25px;
+  -webkit-transition: background 0.5s;
   transition: background 0.5s;
   margin: 10px;
   border: 2px solid #fff;
@@ -768,8 +803,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 #more-features .box {
   padding: 40px;
   margin-bottom: 30px;
-  box-shadow: 0px 0px 30px rgba(73, 78, 92, 0.15);
+  -webkit-box-shadow: 0px 0px 30px rgba(73, 78, 92, 0.15);
+          box-shadow: 0px 0px 30px rgba(73, 78, 92, 0.15);
   background: #fff;
+  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
@@ -780,6 +817,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #more-features .icon i {
   color: #666666;
   font-size: 80px;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   line-height: 0;
 }
@@ -836,6 +874,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #clients img {
   max-width: 100%;
   opacity: 0.5;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   padding: 15px 0;
 }
@@ -854,7 +893,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 #pricing .box {
   padding: 40px;
   margin-bottom: 30px;
-  box-shadow: 0px 0px 30px rgba(73, 78, 92, 0.15);
+  -webkit-box-shadow: 0px 0px 30px rgba(73, 78, 92, 0.15);
+          box-shadow: 0px 0px 30px rgba(73, 78, 92, 0.15);
   background: #fff;
   text-align: center;
 }
@@ -905,6 +945,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 6px 30px;
   border-radius: 20px;
   color: #fff;
+  -webkit-transition: none;
   transition: none;
   font-size: 14px;
   font-weight: 400;
@@ -1081,7 +1122,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Contact Section
 --------------------------------*/
 #contact {
-  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
   padding: 60px 0;
   overflow: hidden;
 }
@@ -1121,6 +1163,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   text-align: center;
   width: 36px;
   height: 36px;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   border: 1px solid #1dc8cd;
 }
@@ -1181,7 +1224,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #contact .form input, #contact .form textarea {
   border-radius: 0;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   font-size: 14px;
 }
 
@@ -1202,7 +1246,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------------------------------------*/
 #footer {
   background: #fff;
-  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
   padding: 30px 0;
   color: #333;
   font-size: 14px;
@@ -1225,3 +1270,4 @@ body.mobile-nav-active #mobile-nav-toggle {
 #footer .footer-links a:hover {
   color: #1dc8cd;
 }
+/*# sourceMappingURL=style.css.map */

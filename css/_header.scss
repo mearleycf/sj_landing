@@ -147,9 +147,13 @@
     .product-screen-1 {
       position: absolute;
       z-index: 30;
-      left: calc(50% + 54px);
+      left: calc(20%);
       bottom: 0;
       top: 30px;
+
+      & img {
+        max-width: 60vw;
+      }
     }
 
     .product-screen-2 {
