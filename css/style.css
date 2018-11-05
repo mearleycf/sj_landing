@@ -1270,4 +1270,175 @@ body.mobile-nav-active #mobile-nav-toggle {
 #footer .footer-links a:hover {
   color: #1dc8cd;
 }
+
+:root {
+  --dark-text: #e9e9e9;
+  --dark-bg: #2b2b2b;
+  --dark-title: #e2e2e2;
+  --green-text: #e9e9e9;
+  --green-bg: #00a650;
+  --green-title: #e2e2e2;
+  --light-text: #2b2b2b;
+  --light-bg: dark-text;
+  --light-title: #2a2a2a;
+  --white-text: #2b2b2b;
+  --white-bg: #f1f1f1;
+  --white-title: #2a2a2a;
+}
+
+.sj .dark {
+  background-color: #2b2b2b;
+  color: #e9e9e9;
+}
+
+.sj .dark h1, .sj .dark h2, .sj .dark h3, .sj .dark h4, .sj .dark h5, .sj .dark h6 {
+  color: #e2e2e2;
+}
+
+.sj .dark .title-text {
+  color: #e2e2e2;
+}
+
+.sj .dark .content-text {
+  color: #e9e9e9;
+}
+
+.sj .green {
+  background-color: #00a650;
+  color: #e9e9e9;
+}
+
+.sj .green h1, .sj .green h2, .sj .green h3, .sj .green h4, .sj .green h5, .sj .green h6 {
+  color: #e2e2e2;
+}
+
+.sj .green .title-text {
+  color: #e2e2e2;
+}
+
+.sj .green .content-text {
+  color: #e9e9e9;
+}
+
+.sj .light {
+  background-color: #e9e9e9;
+  color: #2b2b2b;
+}
+
+.sj .light h1, .sj .light h2, .sj .light h3, .sj .light h4, .sj .light h5, .sj .light h6 {
+  color: #2a2a2a;
+}
+
+.sj .light .title-text {
+  color: #2a2a2a;
+}
+
+.sj .light .content-text {
+  color: #2b2b2b;
+}
+
+.sj .white {
+  background-color: #f1f1f1;
+  color: #2b2b2b;
+}
+
+.sj .white h1, .sj .white h2, .sj .white h3, .sj .white h4, .sj .white h5, .sj .white h6 {
+  color: #2a2a2a;
+}
+
+.sj .white .title-text {
+  color: #2a2a2a;
+}
+
+.sj .white .content-text {
+  color: #2b2b2b;
+}
+
+#footer {
+  background-color: #00a650;
+  color: #e9e9e9;
+}
+
+#footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6 {
+  color: #e2e2e2;
+}
+
+#footer .title-text {
+  color: #e2e2e2;
+}
+
+#footer .content-text {
+  color: #e9e9e9;
+}
+
+#footer .footer-links a {
+  color: var(--green-text);
+}
+
+#contact .contact-about p, #contact .info {
+  color: var(--dark-text);
+}
+
+#aboutsj {
+  overflow: hidden;
+}
+
+#aboutsj .about-img {
+  height: 510px;
+  overflow: hidden;
+}
+
+#aboutsj .about-img img {
+  margin-left: -15px;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  #aboutsj .about-img {
+    height: auto;
+  }
+  #aboutsj .about-img img {
+    margin-left: 0;
+    padding-bottom: 30px;
+  }
+}
+
+.advanced-feature-img-left {
+  height: 410px;
+  overflow: hidden;
+  margin-left: -15px;
+  max-width: 100%;
+}
+
+#legal .img-container {
+  height: 410px;
+  width: 100%;
+}
+
+#legal .advanced-feature-img-right {
+  margin-right: -15px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  height: 410px;
+  width: 100%;
+}
+
+#houston .img-container {
+  width: 100%;
+  height: auto;
+}
+
+#houston .img-container img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+}
+
+.section-bg {
+  padding: 60px 0 30px 0;
+}
 /*# sourceMappingURL=style.css.map */

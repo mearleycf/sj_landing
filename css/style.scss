@@ -12,3 +12,119 @@
 @import 'nav';
 @import 'sections';
 @import 'footer';
+
+$dark: #2b2b2b;
+$dark-title: #e2e2e2;
+$dark-text: #e9e9e9;
+$standout-green: #00a650;
+$bright-green: #1de099;
+$teal-green: #1dc8cd;
+$green-title: $dark-title;
+$green-text: $dark-text;
+$light: $dark-text;
+$light-title: #2a2a2a;
+$light-text: $dark;
+$white: #f1f1f1;
+$white-title: $light-title;
+$white-text: $dark;
+
+:root {
+  --dark-text: #{$dark-text};
+  --dark-bg: #{$dark};
+  --dark-title: #{$dark-title};
+  --green-text: #{$dark-text};
+  --green-bg: #{$standout-green};
+  --green-title: #{$dark-title};
+  --light-text: #{$dark};
+  --light-bg: #{dark-text};
+  --light-title: #{$light-title};
+  --white-text: #{$dark};
+  --white-bg: #{$white};
+  --white-title: #{$light-title};
+}
+
+//mixins 
+@mixin colors ($bg, $title, $text) {
+  background-color: $bg;
+  color: $text;
+  & h1, h2, h3, h4, h5, h6 {color: $title};
+  & .title-text {color: $title};
+  & .content-text {color: $text};
+}
+
+// load customized styles
+.sj .dark {@include colors($dark, $dark-title, $dark-text);}
+
+.sj .green {@include colors($standout-green, $green-title, $green-text);}
+
+.sj .light {@include colors($light, $light-title, $light-text);}
+
+.sj .white {@include colors($white, $white-title, $white-text);}
+
+
+//overrides
+#footer {
+  @include colors($standout-green, $green-title, $green-text);
+  & .footer-links a {color: var(--green-text);}
+}
+#contact {
+  & .contact-about p, .info {color: var(--dark-text);}
+}
+
+#aboutsj {
+  overflow: hidden;
+
+  & .about-img  {
+    height: 510px;
+    overflow: hidden;
+    & img {
+      margin-left: -15px;
+      max-width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      height: auto;
+      img {
+        margin-left: 0;
+        padding-bottom: 30px;
+      }
+    }
+  }
+}
+
+.advanced-feature-img-left  {
+  height: 410px;
+  overflow: hidden;
+  margin-left: -15px;
+  max-width: 100%;
+}
+
+#legal .img-container {
+  height: 410px;
+  width: 100%;
+}
+
+#legal .advanced-feature-img-right {
+  margin-right: -15px;
+  object-fit: cover;
+  object-position: center;
+  height: 410px;
+  width: 100%;
+}
+
+#houston .img-container {
+  width: 100%;
+  // max-width: 1140px;
+  height: auto;
+}
+
+#houston .img-container img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+// custom styling
+.section-bg {
+  padding: 60px 0 30px 0;
+}
